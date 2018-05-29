@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+facebook-sdk = {git = "https://github.com/mobolic/facebook-sdk.git"}
+instagram_private_api = {git = "https://git@github.com/ping/instagram_private_api.git", ref = "1.5.5"}
+twython = "*"
+praw = "*"
+pytumblr = "*"
+facebook-sd = {git = "https://github.com/mobolic/facebook-sdk.git", editable = true}
+
+[dev-packages]
+
+[requires]
+python_version = "3.6"
