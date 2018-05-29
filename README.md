@@ -51,7 +51,7 @@ open-social wraps multiple social media api wrappers so they can be accessed fro
 **Implementation**
 
 1. Create applications for use with Facebook Graph API, Tumblr REST API, Twitter REST API, and Reddit REST API. You will also need an Instagram account.
-2. Create a file called info.json in the credentials directory (path: *open_social/credentials/info.json*). *info.json* is where you will store you application credentials. The correct format for *info.json* is below. You must have fields that correlate to the platform application(s) you are using: for example, if you are extracting data from instagram then you will need the instagram document attribute with valid username and password values in your *info.json* file.
+2. Create a file called info.json in the credentials directory (path: *open_social/credentials/info.json*). *info.json* is where you will store your application credentials. The correct format for *info.json* is shown below. You must have fields that correlate to the platform application(s) you are using: for example, if you are extracting data from instagram then you will need the instagram document attribute with valid username and password values in your *info.json* file.
 ```json
 {
 	"facebook":{
