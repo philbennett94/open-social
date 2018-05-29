@@ -51,7 +51,35 @@ open-social wraps multiple social media api wrappers so they can be accessed fro
 **Implementation**
 
 1. Create applications for use with Facebook Graph API, Tumblr REST API, Twitter REST API, and Reddit REST API. You will also need an Instagram account.
-2. Update your credentials in *open_social/credentials/info.json*. *info.json* is provided for your convenience so you do not have to worry about re-entering credentials, but you do not have to use it.
+2. Create a file called info.json in the credentials directory (path: *open_social/credentials/info.json*). *info.json* is where you will store you application credentials. The correct format for *info.json* is below. You must have fields that correlate to the platform application(s) you are using: for example, if you are extracting data from instagram then you will need the instagram document attribute with valid username and password values in your *info.json* file.
+```json
+{
+	"facebook":{
+		"access_token":""
+	},
+	"instagram":{
+		"username":"",
+		"password":""
+	},
+	"twitter":{
+		"app_key":"",
+		"app_secret":"",
+		"oauth_token":"",
+		"oauth_token_secret":""
+	},
+	"reddit":{
+		"client_id":"",
+		"client_secret":"",
+		"user_agent":""
+	},
+	"tumblr":{
+		"consumer_key":"",
+		"consumer_secret":"",
+		"oauth_token":"",
+		"oauth_secret":""
+	}
+}
+```
 3. Import OpenSocial into your python project:
 ```python
 from open_social.open_social import OpenSocial
