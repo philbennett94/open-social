@@ -105,7 +105,7 @@ instagram = opso.get_data(opso.clients[4], "<searchTerm>", 10, relevantUsers = [
 Collective Data Grabs
 
 ```python
-m = OpenSocial()
+opso = OpenSocial()
 
 # create arguments used as filtering parameters for searches across one or more client
 options = {
@@ -115,7 +115,7 @@ options = {
 	"relevantUsers": ["cnn"]}
 
 # execute a search across one or more clients
-data = m.evaluate_all_clients(
+data = opso.evaluate_all_clients(
 	searchTerm="trump", 
 	limit=10, 
 	kwargs=options)
