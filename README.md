@@ -89,8 +89,10 @@ from open_social.open_social import OpenSocial
 Individual Data Grabs
 
 ```python
-opso = OpenSocial()
+# initialize the open-social client 
 # by default, all clients are created and OpenSocial.clients = [FacebookClient, TwitterClient, RedditClient, TumblrClient, InstaGramClient]
+opso = OpenSocial()
+
 # specify a client by accessing an element of the clients list
 # specify a search term, limit - the upper limit for the number of search results returned, and platform specific data sources
 facebook = opso.get_data(opso.clients[0], "<searchTerm>", 10, pages = ["cnn"])
@@ -104,14 +106,18 @@ Collective Data Grabs
 
 ```python
 m = OpenSocial()
+
+# create arguments used as filtering parameters for searches across one or more client
 options = {
 	"pages": ["cnn"],
 	"subReddits": ["worldnews", "news", "politics"],
 	"blogs": ["cnnpolitics.tumblr.com"],
 	"relevantUsers": ["cnn"]}
+
+# execute a search across one or more clients
 data = m.evaluate_all_clients(
-		searchTerm="trump", 
-		limit=10, 
-		kwargs=options)
+	searchTerm="trump", 
+	limit=10, 
+	kwargs=options)
 ```
 Data is returned as a list of dictionaries where each dictionary entry is a datapoint returned from a social media platform's api. OPSO parses data returned from each social media platform differently. A parsed response contains only a subset of fields returned by the apis.
