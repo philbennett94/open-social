@@ -114,4 +114,4 @@ data = m.evaluate_all_clients(
 		limit=10, 
 		kwargs=options)
 ```
-Data is returned as a list of dictionaries where each dictionary entry is a datapoint returned from a social media platform's api. OPSO parses data returned from each social media platform differently. A parsed response contains only a subset of fields returned by the api's.
+Data is returned as a list of dictionaries where each dictionary entry is a datapoint returned from a social media platform's api. OPSO parses data returned from each social media platform differently. A parsed response contains only a subset of fields returned by the apis.
